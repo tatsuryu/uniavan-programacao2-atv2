@@ -1,0 +1,12 @@
+---
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=testing123
+    ports:
+      - 3306:3306
+    volumes:
+      - ./agenda.sql:/docker-entrypoint-initdb.d/agenda.sql
